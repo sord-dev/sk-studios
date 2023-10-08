@@ -1,0 +1,40 @@
+/* BookingSelectionMenu.module.css */
+.selectionMenu {
+  width: 35%;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+
+  font-size: 1.1em;
+  font-weight: 500;
+
+  text-transform: capitalize;
+}
+
+.option:hover {
+  background-color: #4a4a4a;
+  color: rgb(221, 221, 221);
+}
+
+.selected {
+  background-color: #000000;
+  color: white;
+}
+
+.totalPrice,
+.bold {
+  font-weight: bold;
+}

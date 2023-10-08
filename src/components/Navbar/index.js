@@ -3,7 +3,7 @@ import styles from './index.module.css'; // Import your CSS module
 
 export const Navbar = () => {
     return (
-        <div className={styles.navbar}>
+        <header className={styles.navbar}>
             <div className={styles.container}>
                 <div className={styles.logoSection}>
                     <div className={styles.logo}>
@@ -15,7 +15,7 @@ export const Navbar = () => {
                     <p className={styles.contactNumber}>Contact us: skproductions@gmail.com</p>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
