@@ -1,0 +1,44 @@
+/* Navbar.module.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align items to the bottom */
+  height: 25vh;
+  padding: 12px 20px;
+  background-color: #333;
+  color: white;
+  position: relative;
+}
+
+.logoSection {
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom */
+}
+
+.logoText {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: -5px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contactSection {
+  text-align: right;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.contactNumber {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+}

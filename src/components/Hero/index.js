@@ -12,7 +12,7 @@ export const Hero = () => {
                     <Link href={'/book'}><button className={styles.ctaButton}>Book a session</button></Link>
                 </div>
                 <div className={styles.heroContact}>
-                    <p className={styles.contactNumber}>Contact us: +1 234 567 890</p>
+                    <p className={styles.contactNumber}>Contact us: skproductions@gmail.com</p>
                 </div>
             </div>
         </div>
