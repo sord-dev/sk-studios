@@ -1,14 +1,32 @@
 import Head from 'next/head'
+import { useContext, useEffect, useState } from 'react';
 import styles from '@/styles/Home.module.css'
-import { BookingSelect, Navbar } from '@/components'
+import { BookingSelect, Navbar, Calandar, MSF } from '@/components'
+import { useMSF } from '@/contexts/MSFContext';
 
 const options = [
-    { option_name: 'option1', price: '20' },
-    { option_name: 'option2', price: '40' },
-    { option_name: 'option3', price: '60' }
+    { option_name: '1hr Studio Session', description: 'test', price: '20', url: "https://calendly.com/stefansyrett17/studio-session-1hr" },
+    { option_name: '2hr Studio Session', description: 'test', price: '40', url: "https://calendly.com/stefansyrett17/2hr-studio-session" },
+    { option_name: 'Custom Studio Session', description: 'test', price: '0' },
 ]
 
 export default function BookingPreview() {
+    const { stages } = useMSF();
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [formHistory, setFormHistory] = useState([]);
+
+    const handleOptionClick = (option) => {
+        setFormHistory(prev => [...prev, { stage: stages.stage, option, completed: true }])
+        setSelectedOption(option);
+        stages.stepTo(1)
+    };
+
+    const components = [{ render: <BookingSelect key={"stage-1"} {...{ options, handleOptionClick, selectedOption }} />, required: true }, { render: <Calandar key={"stage-2"} {...{ selectedOption }} />, required: true }];
+
+    useEffect(() => {
+        console.log(formHistory)
+    }, [formHistory])
+
     return (
         <>
             <Head>
@@ -20,7 +38,7 @@ export default function BookingPreview() {
 
             <Navbar />
             <main className={styles.container}>
-                <BookingSelect {...{ options }} />
+                <MSF {...{ components, stages }} />
             </main>
         </>
     )

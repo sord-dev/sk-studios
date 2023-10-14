@@ -1,39 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './index.module.css'; // Import your CSS module
 
-export const BookingSelect = ({ options = [{ option_name: 'option1', price: '50' }] }) => {
-    const [selectedOption, setSelectedOption] = useState('option1');
-    const [totalPrice, setTotalPrice] = useState(50); // Default price for option1
-
-    const handleOptionClick = (option, price) => {
-        setSelectedOption(option);
-        setTotalPrice(price);
-    };
-
+export const BookingSelect = ({ options = [], handleOptionClick }) => {
     return (
         <div className={styles.selectionMenu}>
             <div className={styles.options}>
-                {options.map((o, i) => <Option key={i} {...o} {...{ handleOptionClick, selectedOption }} />)}
-
-                <div
-                    className={`${styles.option} ${selectedOption === "Custom" ? styles.selected : ''}`}
-                    onClick={() => handleOptionClick("Custom", 0)}
-                >
-                    Custom option
-                </div>
+                {options?.map((o, i) => <Option key={i} {...o} {...{ i }} handleOptionClick={() => handleOptionClick(o)} />)}
             </div>
-            <div className={styles.totalPrice}>Total Price: £{totalPrice}</div>
         </div>
     );
 };
 
-const Option = ({ option_name, price, handleOptionClick, selectedOption }) => {
+const Option = ({ option_name, price = null, description, handleOptionClick, i }) => {
     return (
-        <div
-            className={`${styles.option} ${selectedOption === option_name ? styles.selected : ''}`}
-            onClick={() => handleOptionClick(option_name, price)}
-        >
-            {option_name} - <span className={styles.bold}>£{price}</span>
+        <div className={styles.option} onClick={handleOptionClick} >
+            <div className={styles.optionMeta}>
+                <span className={styles.num}>{i}</span>
+                <div>
+                    <h3>{option_name}</h3>
+                    <p>{description}</p>
+                </div>
+            </div> <span className={styles.bold}>£{price}</span>
         </div>
     )
 }

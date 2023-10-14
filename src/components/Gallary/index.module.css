@@ -3,11 +3,11 @@
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 10px;
   margin-top: 20px;
+  height: 100%;
 }
 
 .galleryItem {
   overflow: hidden;
-  border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
