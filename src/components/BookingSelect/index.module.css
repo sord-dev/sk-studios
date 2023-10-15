@@ -1,7 +1,6 @@
 .selectionMenu {
   flex: 1;
   padding: 20px;
-  background-color: #f9f9f9;
   color: #333;
 }
 
@@ -15,6 +14,7 @@
   cursor: pointer;
   padding: 14px 20px;
   border: 1px solid #ccc;
+  background-color: white;
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
   display: flex;
@@ -58,7 +58,7 @@
 }
 
 .num {
-  border: 2px solid rgba(0, 0, 0, 0.485);
+  border: 1px solid rgb(0, 0, 0);
   padding: 6px 12px;
   border-radius: 4px;
 }

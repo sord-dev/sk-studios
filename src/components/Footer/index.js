@@ -10,14 +10,13 @@ export function Footer() {
                     <h3 className={styles.footerHeading}>Contact Us</h3>
                     <p className={styles.footerText}>123 Studio Lane, Music City</p>
                     <p className={styles.footerText}>Phone: +1 234 567 890</p>
-                    <p className={styles.footerText}>Email: info@example.com</p>
+                    <Link href={'mailto:skproductions@gmail.com'}><p className={styles.footerText}>Email: skproductions@gmail.com</p></Link>
                 </div>
                 <div className={styles.footerSection}>
                     <h3 className={styles.footerHeading}>Links</h3>
                     <ul className={styles.footerList}>
                         <Link href={'/'}><li className={styles.footerListItem}>Home</li></Link>
                         <Link href={'/book'}><li className={styles.footerListItem}>Book</li></Link>
-                        <Link href={'mailto:skproductions@gmail.com'}><li className={styles.footerListItem}>Contact</li></Link>
                     </ul>
                 </div>
             </div>

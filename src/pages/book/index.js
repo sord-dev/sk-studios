@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '@/styles/Home.module.css'
-import { BookingSelect, Navbar, Calandar, MSF } from '@/components'
+import { BookingSelect, Navbar, Calandar, MSF, Footer } from '@/components'
 import { useMSF } from '@/contexts/MSFContext';
 
 const options = [
@@ -39,6 +39,8 @@ export default function BookingPreview() {
             <main className={styles.container}>
                 <MSF {...{ components, stages }} />
             </main>
+
+            <Footer />
         </>
     )
 }

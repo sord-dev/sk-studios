@@ -29,9 +29,8 @@
 
 .footerList {
   display: flex;
+  flex-direction: column;
   padding: 0;
-  gap: 1em;
-  flex-wrap: wrap;
 }
 
 .footerListItem {

@@ -15,7 +15,7 @@ const Option = ({ option_name, price = null, description, handleOptionClick, i }
     return (
         <div className={styles.option} onClick={handleOptionClick} >
             <div className={styles.optionMeta}>
-                <span className={styles.num}>{i}</span>
+                <span className={styles.num}>{i + 1}</span>
                 <div>
                     <h3>{option_name}</h3>
                     <p>{description}</p>
