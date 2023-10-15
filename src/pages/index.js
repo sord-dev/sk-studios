@@ -9,7 +9,7 @@ const galleryItems = [
   { id: 4, imageUrl: "https://fakeimg.pl/600x400", isDouble: false },
   { id: 5, imageUrl: "https://fakeimg.pl/800x400", isDouble: true },
   { id: 6, imageUrl: "https://fakeimg.pl/600x400", isDouble: false },
-  { id: 7, imageUrl: "https://fakeimg.pl/600x400", isDouble: false },
+  { id: 7, imageUrl: "https://fakeimg.pl/800x400", isDouble: true },
   // ... other gallery items
 ];
 

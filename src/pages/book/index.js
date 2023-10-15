@@ -11,21 +11,20 @@ const options = [
 ]
 
 export default function BookingPreview() {
-    const { stages } = useMSF();
+    const { stages, history } = useMSF();
     const [selectedOption, setSelectedOption] = useState(null);
-    const [formHistory, setFormHistory] = useState([]);
 
     const handleOptionClick = (option) => {
-        setFormHistory(prev => [...prev, { stage: stages.stage, option, completed: true }])
         setSelectedOption(option);
+        history.update(stages.stage, option)
         stages.stepTo(1)
     };
 
     const components = [{ render: <BookingSelect key={"stage-1"} {...{ options, handleOptionClick, selectedOption }} />, required: true }, { render: <Calandar key={"stage-2"} {...{ selectedOption }} />, required: true }];
 
     useEffect(() => {
-        console.log(formHistory)
-    }, [formHistory])
+        console.log(history.state)
+    }, [history])
 
     return (
         <>
