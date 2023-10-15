@@ -8,14 +8,11 @@ export default function Home() {
   return (
     <>
       <SEO title="SK Studios" description="Your custom description here." />
-
       <Hero />
-
       <main className={`${styles.container}`}>
         <Services {...{ data: services }} />
         <Gallery pictures={galleryItems} />
       </main>
-
       <Footer />
     </>
   )

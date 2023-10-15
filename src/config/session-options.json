@@ -1,0 +1,19 @@
+[
+  {
+    "option_name": "1hr Studio Session",
+    "description": "test",
+    "price": "20",
+    "url": "https://calendly.com/stefansyrett17/studio-session-1hr"
+  },
+  {
+    "option_name": "2hr Studio Session",
+    "description": "test",
+    "price": "40",
+    "url": "https://calendly.com/stefansyrett17/2hr-studio-session"
+  },
+  {
+    "option_name": "Custom Studio Session",
+    "description": "test",
+    "price": "0"
+  }
+]

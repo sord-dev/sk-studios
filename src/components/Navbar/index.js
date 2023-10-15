@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './index.module.css'; // Import your CSS module
+import Link from 'next/link';
 
 export const Navbar = () => {
     return (
@@ -12,7 +13,7 @@ export const Navbar = () => {
                     </div>
                 </div>
                 <div className={styles.contactSection}>
-                    <p className={styles.contactNumber}>Contact us: skproductions@gmail.com</p>
+                    <Link href={'mailto:skproductions@gmail.com'}><p className={styles.contactNumber}>Contact us: skproductions@gmail.com</p></Link>
                 </div>
             </div>
         </header>
