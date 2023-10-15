@@ -1,7 +1,7 @@
 .msf {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  height: 72vh;
+  min-height: 72vh;
 }
 
 .msf.show {
