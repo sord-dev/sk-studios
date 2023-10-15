@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const Hero = () => {
     return (
-        <div className={styles.hero}>
+        <header className={styles.hero}>
             <div className={styles.heroContent}>
                 <div className={styles.heroText}>
                     <h1 className={styles.heroTitle}>SK Studios</h1>
@@ -15,6 +15,6 @@ export const Hero = () => {
                     <p className={styles.contactNumber}>Contact us: skproductions@gmail.com</p>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };

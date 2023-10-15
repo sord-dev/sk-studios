@@ -30,7 +30,7 @@
 
 @media screen and (max-height: 900px) {
   .msf {
-    height: 60vh;
+    min-height: 60vh;
   }
 }
 
