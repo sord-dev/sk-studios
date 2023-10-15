@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import { Gallery, Hero } from '@/components'
+import { Footer, Gallery, Hero, Services } from '@/components'
 
 const galleryItems = [
   { id: 1, imageUrl: "https://fakeimg.pl/600x400", isDouble: false },
@@ -8,10 +8,23 @@ const galleryItems = [
   { id: 3, imageUrl: "https://fakeimg.pl/800x400", isDouble: true },
   { id: 4, imageUrl: "https://fakeimg.pl/600x400", isDouble: false },
   { id: 5, imageUrl: "https://fakeimg.pl/800x400", isDouble: true },
-  { id: 6, imageUrl: "https://fakeimg.pl/600x400", isDouble: false },
-  { id: 7, imageUrl: "https://fakeimg.pl/800x400", isDouble: true },
-  // ... other gallery items
+  { id: 6, imageUrl: "https://fakeimg.pl/600x400", isDouble: false }
 ];
+
+const services = [
+  {
+    title: 'test',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit vitae modi laborum esse excepturi repudiandae consequatur sint sunt quis ut rerum asperiores cupiditate, debitis nemo officiis ea officia eveniet maxime!'
+  },
+  {
+    title: 'test',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit vitae modi laborum esse excepturi repudiandae consequatur sint sunt quis ut rerum asperiores cupiditate, debitis nemo officiis ea officia eveniet maxime!'
+  },
+  {
+    title: 'test',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit vitae modi laborum esse excepturi repudiandae consequatur sint sunt quis ut rerum asperiores cupiditate, debitis nemo officiis ea officia eveniet maxime!'
+  }
+]
 
 
 export default function Home() {
@@ -25,8 +38,14 @@ export default function Home() {
       </Head>
       <Hero />
       <main className={`${styles.container}`}>
+
+        <div>
+          <Services {...{ data: services }} />
+        </div>
         <Gallery pictures={galleryItems} />
       </main>
+
+      <Footer />
     </>
   )
 }

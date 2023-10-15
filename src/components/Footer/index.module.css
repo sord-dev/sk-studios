@@ -1,0 +1,51 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerSection {
+  width: 45%;
+}
+
+.footerHeading {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footerText {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footerList {
+  display: flex;
+  padding: 0;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.footerListItem {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.footerBottom {
+  text-align: center;
+}
+
+.footerBottom p {
+  font-size: 0.9em;
+}
+
+/* Add more styles as needed */

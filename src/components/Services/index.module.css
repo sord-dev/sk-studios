@@ -1,0 +1,31 @@
+/* Services.module.css */
+
+.servicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.serviceItem {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Add more styles as needed */
