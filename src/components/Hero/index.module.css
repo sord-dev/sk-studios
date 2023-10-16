@@ -33,7 +33,7 @@
   align-items: center;
   text-align: center;
   position: absolute;
-  margin-top: 14vh;
+  margin-top: 10vh;
 }
 
 .heroText {
@@ -85,4 +85,14 @@
   margin: 0;
 }
 
-/* Styles for the gallery component can be added here or in a separate file */
+.logoContainer {
+  max-width: 360px; /* Set your desired maximum width */
+  max-height: 280px; /* Set your desired maximum height */
+}
+
+@media screen and (max-width: 786px) {
+  .logoContainer {
+    min-width: 240px; /* Set your desired maximum width */
+    min-height: 10px; /* Set your desired maximum height */
+  }
+}
