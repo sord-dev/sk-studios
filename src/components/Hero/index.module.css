@@ -96,3 +96,9 @@
     min-height: 10px; /* Set your desired maximum height */
   }
 }
+
+@media screen and (max-width: 428px) {
+  .hero {
+    min-height: 70vh; /* Set your desired maximum height */
+  }
+}

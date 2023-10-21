@@ -12,10 +12,10 @@ export const Hero = () => {
                     <div className={styles.logoContainer}>
                         <Image
                             src={"/sk-logo-nbg.png"}
-                            width={400}
-                            height={400}
+                            width={320}
+                            height={320}
                             alt='SK Productions Logo'
-                            layout="responsive" // Ensures the image maintains aspect ratio within the specified dimensions
+                            sizes='(max-width: 886px) 340px, 400px'
                             draggable='false'
                         />
                     </div>
