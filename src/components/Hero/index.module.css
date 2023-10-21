@@ -87,7 +87,7 @@
 
 .logoContainer {
   max-width: 360px; /* Set your desired maximum width */
-  max-height: 280px; /* Set your desired maximum height */
+  max-height: 220px; /* Set your desired maximum height */
 }
 
 @media screen and (max-width: 786px) {

@@ -11,11 +11,11 @@ export const Hero = () => {
                     {/* Set max-width and max-height for the Image component */}
                     <div className={styles.logoContainer}>
                         <Image
-                            src={"/sk-logo-nbg.png"}
-                            width={320}
-                            height={320}
+                            src={"https://i.postimg.cc/2V2dtFYP/sk-logo-nbg.png"}
+                            width={300}
+                            height={300}
                             alt='SK Productions Logo'
-                            sizes='(max-width: 886px) 340px, 400px'
+                            sizes='(max-width: 886px) 300px, 400px'
                             draggable='false'
                         />
                     </div>

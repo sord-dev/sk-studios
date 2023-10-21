@@ -9,7 +9,7 @@ export const Navbar = () => {
             <div className={styles.container}>
                 <Link href={'/'}>
                     <div className={styles.logoSection}>
-                        <Image src={"/sk-logo-nbg.png"} width={78} height={78} alt='SK Productions Logo' draggable='false' />
+                        <Image src={"https://i.postimg.cc/2V2dtFYP/sk-logo-nbg.png"} width={78} height={78} alt='SK Productions Logo' draggable='false' />
                         <div className={styles.logo}>
                             <h1 className={styles.logoText}>SK Studios</h1>
                             <p className={styles.subtitle}>Wys here my bro</p>
