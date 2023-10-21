@@ -32,7 +32,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 25vh;
+  position: absolute;
+  margin-top: 10vh;
 }
 
 .heroText {
@@ -40,7 +41,8 @@
   color: white;
   padding: 12px;
   border-radius: 5px;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .heroTitle {
@@ -83,4 +85,20 @@
   margin: 0;
 }
 
-/* Styles for the gallery component can be added here or in a separate file */
+.logoContainer {
+  max-width: 360px; /* Set your desired maximum width */
+  max-height: 280px; /* Set your desired maximum height */
+}
+
+@media screen and (max-width: 786px) {
+  .logoContainer {
+    min-width: 240px; /* Set your desired maximum width */
+    min-height: 10px; /* Set your desired maximum height */
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .hero {
+    min-height: 70vh; /* Set your desired maximum height */
+  }
+}

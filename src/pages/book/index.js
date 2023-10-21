@@ -32,7 +32,7 @@ const BookingPreview = () => {
             required: true
         },
         {
-            render: <CustomForm />,
+            render: <CustomForm key={"stage-3"} />,
             required: false,
             ethemeral: true
         }

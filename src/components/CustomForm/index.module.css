@@ -13,7 +13,6 @@
 }
 
 .option {
-  cursor: pointer;
   padding: 14px 20px;
   border: 1px solid #ccc;
   background-color: white;
@@ -24,6 +23,10 @@
   align-items: center;
   font-size: 1.2em;
   text-transform: capitalize;
+}
+
+.option label {
+  cursor: pointer;
 }
 
 .option h3 {

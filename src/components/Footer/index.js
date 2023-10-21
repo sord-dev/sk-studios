@@ -15,8 +15,8 @@ export function Footer() {
                 <div className={styles.footerSection}>
                     <h3 className={styles.footerHeading}>Links</h3>
                     <ul className={styles.footerList}>
-                        <Link href={'/'}><li className={styles.footerListItem}>Home</li></Link>
-                        <Link href={'/book'}><li className={styles.footerListItem}>Book</li></Link>
+                        <li className={styles.footerListItem}><Link href={'/'}>Home</Link></li>
+                        <li className={styles.footerListItem}><Link href={'/book'}>Book</Link></li>
                     </ul>
                 </div>
             </div>
@@ -27,4 +27,3 @@ export function Footer() {
     );
 }
 
-export default Footer;
