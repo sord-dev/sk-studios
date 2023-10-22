@@ -30,6 +30,7 @@ export const MSFProvider = ({ children }) => {
         stage,
         stepTo,
         error,
+        setError,
         reset: () => { setFormHistory([]); setStage(0); setError(null) }
     };
 

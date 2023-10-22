@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '@/styles/Home.module.css';
-import { BookingSelect, Navbar, Calandar, MSF, Footer, SEO, CustomForm } from '@/components';
+import { BookingSelect, Navbar, Calandar, MSF, Footer, SEO, CustomForm, CustomFormWithModal } from '@/components';
 import { useMSF } from '@/contexts/MSFContext';
 import options from '../../config/session-options.json';
 
@@ -32,7 +32,7 @@ const BookingPreview = () => {
             required: true
         },
         {
-            render: <CustomForm key={"stage-3"} />,
+            render: <CustomFormWithModal {...{ CustomForm }} key={"stage-3"} />,
             required: false,
             ethemeral: true
         }

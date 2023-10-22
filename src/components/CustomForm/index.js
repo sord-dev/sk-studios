@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.css'; // Import your CSS module
+import { useMSF } from '@/contexts/MSFContext';
+import CustomFormWithModal from './ext';
 
 const custom_availability = {
     days: [
@@ -16,33 +18,21 @@ const custom_availability = {
             description: 'Book Studio For A Week'
         }
     ],
-    hours: 6
+    hours: 5
 }
 
-export const CustomForm = () => {
-    const [days, setDays] = useState(1);
+export const CustomForm = ({ setResult }) => {
+    const [days, setDays] = useState(null);
     const [hours, setHours] = useState(1);
+    const { stages } = useMSF();
 
-    const handleDaysChange = (e) => {
-        setDays(parseInt(e.target.value));
-    };
-
-    const handleHoursChange = (e) => {
-        setHours(parseInt(e.target.value));
-    };
+    const handleDaysChange = (e) => setDays(parseInt(e.target.value));
+    const handleHoursChange = (e) => setHours(parseInt(e.target.value));
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Format form details as an email content
-        const emailContent = `
-      Custom Studio Session Request:
-      Number of Days: ${days}
-      Hours per Day: ${hours}
-    `;
-
-        // You can now send this email content to the client or perform any desired action with it
-        console.log('Modal: To confirm, this is the request you want? ', emailContent);
+        if (!days) return stages.setError('Please select an option.')
+        setResult({ days, hours })
     };
 
     return (
@@ -74,6 +64,8 @@ export const CustomForm = () => {
         </div>
     );
 };
+
+export { CustomFormWithModal };
 
 const Option = ({ quantity, description, days, handleDaysChange }) => {
     return (
